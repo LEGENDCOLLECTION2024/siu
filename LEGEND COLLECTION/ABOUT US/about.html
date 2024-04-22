@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-image: url('image\ \(58\).png'); /* Cambia 'ruta/a/tu/imagen.jpg' por la ruta de tu imagen */
+            background-size: cover;
+            background-position: center;
+            height: 150vh;
+            position: relative; /* Añade posición relativa para que el pie de página se pueda posicionar de forma absoluta */
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.8); /* Ajusta la opacidad del fondo del encabezado */
+            justify-content: space-between;
+            align-items: center;
+            padding: 35px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 150px;
+            margin-right: 10px;
+        }
+
+        nav a {
+            font-weight: 750;
+            padding-right: 10px;
+        }
+
+        nav a:hover {
+            color: rgb(255, 255, 1);
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+            }
+            nav {
+                padding: 5px 0px;
+            }
+        }
+
+        /* Estilos específicos para la sección "About Us" */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative; /* Añade posición relativa para que los elementos internos puedan posicionarse absolutamente */
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 200px;
+        }
+
+        .image-item {
+            flex-basis: calc(33.33% - 20px);
+            max-width: calc(33.33% - 20px);
+            height: 450px; /* Establecer una altura fija para asegurar que todas las imágenes tengan la misma altura */
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Asegura que la imagen se ajuste al contenedor sin distorsionarse */
+            transition: transform 0.3s ease;
+        }
+
+        .image-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .image-item p {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 238, 0, 0.8); /* Cambia el valor alfa a 0.8 para hacer el fondo del texto menos transparente */
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            margin: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            box-sizing: border-box;
+            font-family: 'Bangers', sans-serif; /* Utiliza la fuente BANGERS para el texto */
+        }
+
+        .image-item:hover p {
+            opacity: 1;
+        }
+
+        .instagram-logo {
+            position: absolute;
+            top: -0.5px;
+            right: 250px;
+            width: 100px;
+            height: 100px;
+        }
+
+        /* Estilos para el título "About Us" */
+        .title-about-us {
+            position: absolute;
+            top: 120px; /* Ajusta la posición vertical */
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Alfa Slab One', sans-serif; /* Utiliza la fuente Alfa Slab One para el texto */
+            color: gold; /* Cambia el color a oro */
+            font-size: 50px; /* Ajusta el tamaño de la fuente */
+            background-color: rgba(0, 0, 0, 2); /* Fondo semi-transparente */
+            padding: 10px 20px; /* Añade espacio alrededor del texto */
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            animation: rainbow 5s infinite; /* Añade la animación de arcoíris */
+        }
+
+        /* Animación de arcoíris */
+        @keyframes rainbow {
+            0% {
+                color: red;
+            }
+            20% {
+                color: orange;
+            }
+            40% {
+                color: yellow;
+            }
+            60% {
+                color: green;
+            }
+            80% {
+                color: blue;
+            }
+            100% {
+                color: purple;
+            }
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Alfa+Slab+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="file:///C:/Users/High%20school%2024/Downloads/LEGEND%20COLLECTION/HOME%20PAGE/HOME.HTML" class="logo">
+            <img src="descarga.png" alt="logo de la compañia">
+            <h2 class="nombre-empresa">Legend Collection</h2>
+        </a>
+        <nav>
+            <a href="file:///C:/Users/High%20school%2024/Downloads/LEGEND%20COLLECTION/OUR%20COLLECTION/OUR.HTML" class="nav-link">Our Collection</a>
+            <a href="file:///C:/Users/High%20school%2024/Downloads/LEGEND%20COLLECTION/ABOUT%20US/about.html" class="nav-link">About us</a>
+            <a href="file:///C:/Users/High%20school%2024/Downloads/LEGEND%20COLLECTION/LOG%20IN/LOG%20IN.HTML" class="nav-link">Log in</a>
+        </nav>
+    </header>
+   
+    <div class="container">
+        <div class="image-section">
+            <div class="image-item">
+                <a href="https://www.instagram.com/jjgarciacamp/" target="_blank">
+                    <img src="Captura de pantalla 2024-03-12 154419.png" alt="Image 1">
+                    <p>Julian Garcia, known in the digital world as "SpeedyJules", is an iconic figure in the social media and motorsports scene. Gifted with natural charisma and an innate ability for storytelling, Julian began his rise on YouTube by sharing videos of his karting exploits.</p>
+                    <img class="instagram-logo" src="" alt="Instagram logo">
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="https://www.instagram.com/luiscarlos_.26/" target="_blank">
+                    <img src="Captura de pantalla 2024-03-12 163908.png" alt="Image 2">
+                    <p>Luis Ahmed de la Madrid, known in the world of motorsports as "The Star of Miravalle", is a living legend on the race tracks. Born into a modest family on the outskirts of Miravalle, a small town known for its love of motorsports, Luis demonstrated exceptional talent from an early age.</p>
+                    <img class="instagram-logo" src="instagram_logo.png" alt="Instagram logo">
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="https://www.instagram.com/zacefron/" target="_blank">
+                    <img src="https://salerm.imgix.net/media/2023/jopo-contraste.jpg?auto=format" alt="Image 3">
+                    <p>Cristóbal Amoz, better known as "El Perfecto", is an enigmatic figure in the world of clandestine motorsports. Born in the slums of the city, Cristóbal grew up surrounded by unorthodox influences, which shaped his character from an early age.</p>
+                    <img class="instagram-logo" src="instagram_logo.png" alt="Instagram logo">
+                </a>
+            </div>
+        </div>
+        <!-- Contenedor del video -->
+      
+        </div>
+    </div>
+    <h1 class="title-about-us">About Us</h1>
+
+    <!-- Pie de página animado -->
+    <footer>
+        © 2024 Legend Collection. All rights reserved.
+    </footer>
+</body>
+</html>

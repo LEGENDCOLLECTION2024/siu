@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background-image: url('https://j.gifs.com/j21rD4@facebook.gif'); /* Cambia 'ruta/a/tu/imagen.gif' por la ruta de tu GIF */
+      background-size: cover;
+      background-position: center;
+      height: 150vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.8); /* Ajusta la opacidad del fondo del encabezado */
+      justify-content: space-between;
+      align-items: center;
+      padding: 35px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 150px;
+      margin-right: 10px;
+    }
+
+    nav a {
+      font-weight: 600;
+      padding-right: 10px;
+    }
+
+    nav a:hover {
+      color: rgb(255, 255, 1);
+    }
+
+    @media (max-width: 700px) {
+      header {
+          flex-direction: column;
+      }
+      nav {
+          padding: 5px 0px;
+      }
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      font-family: 'Bungee Spice', cursive; /* Agregar la fuente Bungee Spice */
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .back-to-login {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="file:///C:/Users/High%20school%2024/Downloads/LEGEND%20COLLECTION/HOME%20PAGE/HOME.HTML" class="logo">
+      <img src="descarga.png" alt="logo de la compañia">
+      <h2 class="nombre-empresa">Legend Collection</h2>
+    </a>
+    <nav>
+        <a href="file:///C:/Users/High%20school%2024/Downloads/LEGEND%20COLLECTION/OUR%20COLLECTION/OUR.HTML" class="nav-link">Our Collection</a>
+        <a href="file:///C:/Users/High%20school%2024/Downloads/LEGEND%20COLLECTION/ABOUT%20US/about.html" class="nav-link">About us</a>
+        <a href="file:///C:/Users/High%20school%2024/Downloads/LEGEND%20COLLECTION/LOG%20IN/LOG%20IN.HTML" class="nav-link">Log in</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>RESET PASSWORD</h2> <!-- Cambiar el texto "Forgot Password" por "Bungee Spice" -->
+    <form id="reset-password-form" action="file:///C:/Users/High%20school%2024/Downloads/LEGEND%20COLLECTION/HOME%20PAGE/HOME.HTML">
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <input type="password" id="password" placeholder="Enter new password" required>
+      <button type="submit">Reset Password</button>
+    </form>
+    <div class="back-to-login">
+      <a href="file:///C:/Users/High%20school%2024/Downloads/LEGEND%20COLLECTION/HOME%20PAGE/HOME.HTML">Back to Login</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('reset-password-form').addEventListener('submit', function(event) {
+      var email = document.getElementById('email').value;
+
+      if (!validateEmail(email)) {
+        alert("Please enter a valid email address with @gmail.com , @yahoo.com , or  @hotmail.com domain.");
+        event.preventDefault(); // Prevent the form submission
+      }
+    });
+
+    function validateEmail(email) {
+      var domain = email.split('@')[1];
+      return domain === 'gmail.com' || domain === 'yahoo.com' || domain === 'hotmail.com';
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+

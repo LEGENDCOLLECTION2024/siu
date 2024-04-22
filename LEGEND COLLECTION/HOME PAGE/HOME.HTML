@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Meta tags -->
+  <meta name="description" content="Welcome to Legend Collection! We are passionate about offering you a unique experience in the world of Funko Pop.">
+  <meta name="keywords" content="Legend Collection, Funko Pop, collectibles, merchandise">
+  <meta name="author" content="Legend Collection">
+  <!-- Link a la fuente de Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap">
+  <!-- Estilos CSS -->
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background-image: url('image\ \(58\).png');
+      background-size: cover;
+      background-position: center;
+      height: 180vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: space-between;
+      align-items: center;
+      padding: 35px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 150px;
+      margin-right: 10px;
+    }
+
+    nav a {
+      font-weight: 600;
+      padding-right: 10px;
+    }
+
+    nav a:hover {
+      color: rgb(255, 255, 1);
+    }
+
+    @media (max-width: 700px) {
+      header {
+          flex-direction: column;
+      }
+      nav {
+          padding: 5px 0px;
+      }
+    }
+
+    /* Estilos para el carrusel */
+    .carrusel-container {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .carrusel {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carrusel img {
+      width: 100%;
+      height: auto;
+    }
+
+    .carrusel-indicadores {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .carrusel-indicador {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .carrusel-indicador.activo {
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    /* Estilos para el contenedor del texto */
+    .texto-container {
+      max-width: 800px;
+      margin: 50px auto; /* Aumenta el margen superior e inferior */
+      padding: 50px;
+      background-color: rgba(0, 0, 0, 1);
+      border-radius: 20px;
+      text-align: left;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Estilos para el texto debajo del carrusel */
+    .texto-bajo-carrusel {
+      margin-top: 10px;
+      color: white;
+      font-family: 'Martian Mono', monospace;
+      text-align: justify;
+    }
+
+    /* Estilos para la animación de explosión */
+    .explosion {
+      animation: explode 0.5s forwards;
+    }
+
+    @keyframes explode {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    /* Estilos para el pie de página animado */
+    #footer-padre {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      animation: animateFooter 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes animateFooter {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-20px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="file:///C:/Users/High%20school%2024/Downloads/LEGEND%20COLLECTION/HOME%20PAGE/HOME.HTML" class="logo">
+      <img src="descarga.png" alt="logo de la compañia">
+      <h2 class="nombre-empresa">Legend Collection</h2>
+    </a>
+    <nav>
+      <a href="file:///C:/Users/High%20school%2024/Downloads/LEGEND%20COLLECTION/OUR%20COLLECTION/OUR.HTML" class="nav-link">Our Collection</a>
+      <a href="file:///C:/Users/High%20school%2024/Downloads/LEGEND%20COLLECTION/ABOUT%20US/about.html" class="nav-link">About us</a>
+      <a href="file:///C:/Users/High%20school%2024/Downloads/LEGEND%20COLLECTION/LOG%20IN/LOG%20IN.HTML" class="nav-link">Log in</a>
+    </nav>
+  </header>
+
+  <!-- Carrusel de imágenes -->
+  <div class="carrusel-container">
+    <div class="carrusel">
+      <img src="Captura de pantalla 2024-03-19 095450.png" alt="Imagen 1">
+      <img src="mm.png" alt="Imagen 2">
+      <img src="marijane.png" alt="Imagen 3">
+      <img src="ml.png" alt="Imagen 4">
+      <img src="payo.png" alt="Imagen 5">
+    </div>
+  </div>
+
+  <!-- Indicadores del carrusel -->
+  <div class="carrusel-indicadores">
+    <div class="carrusel-indicador activo"></div>
+    <div class="carrusel-indicador"></div>
+    <div class="carrusel-indicador"></div>
+    <div class="carrusel-indicador"></div>
+    <div class="carrusel-indicador"></div>
+  </div>
+
+  <!-- Contenedor del texto debajo del carrusel -->
+  <div class="texto-container" onclick="resetExplosion()">
+    <div class="texto-bajo-carrusel">
+      <p>Welcome to Legend Collection!<br>
+     
+      <br>We are passionate about offering you a unique experience in the world of Funko Pop. We are more than a store, we are a destination for collectors and fans alike 
+      
+      Discover a Wide Selection Explore our extensive catalog of Funkos Pop that ranges from your favorite characters from movies, series, video games, comics and more.CLICK HERE</p>
+    </div>
+  </div>
+
+  <!-- JavaScript para el carrusel -->
+  <script>
+    const carrusel = document.querySelector('.carrusel');
+    const indicadores = document.querySelectorAll('.carrusel-indicador');
+    let indiceActivo = 0;
+
+    function mostrarImagen(indice) {
+      const desplazamiento = -100 * indice;
+      carrusel.style.transform = `translateX(${desplazamiento}%)`;
+
+      indicadores[indiceActivo].classList.remove('activo');
+      indicadores[indice].classList.add('activo');
+
+      indiceActivo = indice;
+    }
+
+    function avanzarImagen() {
+      const siguienteIndice = (indiceActivo + 1) % carrusel.children.length;
+      mostrarImagen(siguienteIndice);
+    }
+
+    function retrocederImagen() {
+      const indiceAnterior = (indiceActivo - 1 + carrusel.children.length) % carrusel.children.length;
+      mostrarImagen(indiceAnterior);
+    }
+
+    function iniciarCarrusel() {
+      setInterval(avanzarImagen, 5000);
+    }
+
+    indicadores.forEach((indicador, indice) => {
+      indicador.addEventListener('click', () => mostrarImagen(indice));
+    });
+
+    iniciarCarrusel();
+
+    function resetExplosion() {
+      const texto = document.querySelector('.texto-container');
+      texto.classList.remove('explosion');
+      setTimeout(() => {
+        texto.classList.add('explosion');
+        setTimeout(() => {
+          texto.classList.remove('explosion');
+        }, 1000);
+      }, 100);
+    }
+  </script>
+
+  <!-- Elemento de audio -->
+  <audio id="miAudio" src="Vidrio roto Minecraft - sonido.mp3"></audio>
+
+  <!-- JavaScript para la reproducción de audio en toda la página -->
+  <script>
+    // Función para reproducir el audio
+    function reproducirAudio() {
+      // Obtener el elemento de audio
+      var audio = document.getElementById("miAudio");
+
+      // Reproducir el audio
+      audio.play();
+    }
+
+    // Escuchar el evento de clic en todo el documento
+    document.addEventListener('click', function() {
+      reproducirAudio();
+    });
+  </script>
+
+  <!-- Pie de página animado -->
+  <footer id="footer-padre">
+    © 2024 Legend Collection. All rights reserved.
+  </footer>
+</body>
+</html>

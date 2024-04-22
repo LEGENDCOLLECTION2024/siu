@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: space-between;
+      align-items: center;
+      padding: 35px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 150px;
+      margin-right: 10px;
+    }
+
+    nav a {
+      font-weight: 600;
+      padding-right: 10px;
+    }
+
+    nav a:hover {
+      color: rgb(255, 255, 1);
+    }
+
+    @media (max-width: 700px) {
+      header {
+          flex-direction: column;
+      }
+      nav {
+          padding: 5px 0px;
+      }
+    }
+
+    /* Estilos para el formulario */
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      margin: 20px auto;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="password"] {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .form-container button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Estilos para el pie de página */
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="file:///C:/Users/High%20school%2024/Downloads/LEGEND%20COLLECTION/HOME%20PAGE/HOME.HTML" class="logo">
+      <img src="descarga.png" alt="logo de la compañia">
+      <h2 class="nombre-empresa">Legend Collection</h2>
+    </a>
+    <nav>
+        <a href="file:///C:/Users/High%20school%2024/Downloads/LEGEND%20COLLECTION/OUR%20COLLECTION/OUR.HTML" class="nav-link">Our Collection</a>
+        <a href="file:///C:/Users/High%20school%2024/Downloads/LEGEND%20COLLECTION/ABOUT%20US/about.html" class="nav-link">About us</a>
+        <a href="file:///C:/Users/High%20school%2024/Downloads/LEGEND%20COLLECTION/LOG%20IN/LOG%20IN.HTML" class="nav-link">Log in</a>
+    </nav>
+  </header>
+
+  <div class="form-container">
+    <h2>Create an account</h2>
+    <form id="registration-form" action="file:///C:/Users/High%20school%2024/Downloads/LEGEND%20COLLECTION/ULTIMATE/ULTIMATE.HTML" method="post">
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="text" id="email" placeholder="Gmail" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Create Account</button>
+    </form>
+  </div>
+
+  <img src="Captura de pantalla 2024-04-08 184259.png" alt="Imagen" style="position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; opacity: 100;">
+  
+  <div class="footer">
+    <span>© 2024 Legend Collection. All rights reserved.</span>
+  </div>
+
+  <script>
+    document.getElementById('registration-form').addEventListener('submit', function(event) {
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+
+      if (!validateEmail(email)) {
+        alert("Please enter a valid email address with '@gmail.com', '@yahoo.com', or '@hotmail.com' domain.");
+        event.preventDefault(); // Prevent the form submission
+      }
+
+      if (password.length < 8) {
+        alert("Password must be at least 8 characters long.");
+        event.preventDefault(); // Prevent the form submission
+      }
+    });
+
+    function validateEmail(email) {
+      var domain = email.split('@')[1];
+      return domain === 'gmail.com' || domain === 'yahoo.com' || domain === 'hotmail.com';
+    }
+  </script>
+</body>
+</html>
